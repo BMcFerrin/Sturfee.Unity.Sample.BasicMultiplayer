@@ -1,15 +1,32 @@
+# BUILD REQUIREMENTS
+
+The default project has blank Mapbox and Sturfee keys.  
+*You must plug in your own unique keys in order to use this sample game correctly.*
+
+Go to [Mapbox.com](https://mapbox.com) and [Sturfee.com](https://sturfee.com) and create an account to generate your respective keys.
+
+**How to apply Mapbox key:**
+
+1. In the Unity project, on the top menu bar, click Mapbox -> Setup. A new window should appear.
+2. Under "Access Token" paste your key value from the Mapbox website and press the "Submit" button
+
+**How to apply Sturfee key:**
+
+1. In the Unity project, on the top menu bar, click Sturfee -> Configure. A new window should appear.
+2. Next to "API Key" there is an empty box. Paste your key value from the Sturfee website here and press the "Request Access" button
+
 # HOW TO PLAY:
 
-### Requirements:
+### Full Multiplayer Experience Requirements:
 	- Game is built on at least 2 phones
-	- Being outside
+	- Be outside in Sturfee supported location
 
 ### Recommended
 	- Both phones support AR Core or AR Kit
 
 ### Steps:
 1. Go outside.
-2. Check that your 2 phones have GPS on with a good internet connection.
+2. Check that your two phones have GPS on with a good internet connection.
 3. Open the app on your first phone.
 
  *PHONE 1:*
@@ -35,8 +52,8 @@
 
  *ANY PHONE:*
 
-14. On the right side of the screen, there is a ‘Place Target’ button. If you press it, a target will be placed in the environment on the ground or buildings based on where your crosshairs are pointing. Placing a target can take some time as it calls the Sturfee server and returns the target in a specific GPS position. This target can be seen by all players.
-15. The ‘Shoot’ button allows you to shoot projectiles and destroy targets any player places
+14. On the right side of the screen, there is a `Place Target` button. If you press it, a target will be placed in the environment on the ground or buildings based on where your crosshairs are pointing. Placing a target might take a few seconds as it calls the Sturfee server and returns the target in a specific GPS position. This target can be seen by all players.
+15. The `Shoot` button allows you to shoot projectiles and destroy targets any player places
 
 ___
 
