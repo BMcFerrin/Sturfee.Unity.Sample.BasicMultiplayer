@@ -59,12 +59,12 @@ public class PlayerController : NetworkBehaviour
 		}
 	}
 
-	public void ShootButtonClick()
+	public void OnShootClick()
 	{
 		CalculateBulletProjection ();
 	}
 
-	public void PlaceTargetButtonClick()
+	public void OnPlaceTargetClick()
 	{
 		if (!_activeHitscan)
 		{
@@ -165,7 +165,7 @@ public class PlayerController : NetworkBehaviour
 		target.GetComponent<Target> ().GpsPos = gpsPos;
 		target.GetComponent<Target> ().Orientation = rotation;
 
-		NetworkServer.Spawn(target);  // Spawns the target on clients
+		NetworkServer.Spawn(target);	// Spawns the target on clients
 	}
 
 	[Command]
@@ -179,6 +179,6 @@ public class PlayerController : NetworkBehaviour
 		bulletScript.Direction = direction;
 		bulletScript.RaycastShot = raycastShot;
 
-		NetworkServer.Spawn(bullet); 	// Spawns the bullet on clients
+		NetworkServer.Spawn(bullet);	// Spawns the bullet on clients
 	}
 }

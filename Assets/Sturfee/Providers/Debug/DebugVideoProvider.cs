@@ -80,7 +80,7 @@ public class DebugVideoProvider : VideoProviderBase {
 
 	public override void Destroy ()
 	{
-		UnityEngine.Object.Destroy (_backgroundCamera);
+		UnityEngine.Object.Destroy (_backgroundCamera.gameObject);
 		UnityEngine.Object.Destroy(GameObject.Find("Debug Video Provider Bg Render Canvas"));
 
 	}

@@ -286,7 +286,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1007721072}
-        m_MethodName: CreateMatchButtonClick
+        m_MethodName: OnCreateMatchClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -770,7 +770,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1007721072}
-        m_MethodName: CreateButtonClick
+        m_MethodName: OnCreateClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1264,7 +1264,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1007721072}
-        m_MethodName: FindMatchButtonClick
+        m_MethodName: OnFindMatchClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3176,7 +3176,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1007721072}
-        m_MethodName: ExitMatchButtonClick
+        m_MethodName: OnExitMatchClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

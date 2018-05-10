@@ -69,14 +69,14 @@ public class MatchManager : MonoBehaviour{
 		StartMenu.SetActive (true);
 	}
 
-	public void CreateMatchButtonClick()
+	public void OnCreateMatchClick()
 	{
 		// create a default match name
 		int index = Random.Range (0, _defaultMatchNames.Length);
 		MatchNameInputField.text = _defaultMatchNames [index] + Random.Range (1, 9999);
 	}
 
-	public void CreateButtonClick()
+	public void OnCreateClick()
 	{
 		if (MatchNameInputField.text.Length > 0)
 		{
@@ -92,7 +92,7 @@ public class MatchManager : MonoBehaviour{
 		}
 	}
 
-	public void FindMatchButtonClick()
+	public void OnFindMatchClick()
 	{
 		GameNetworkManager.StartMatchMaker ();
 		GameNetworkManager.matchMaker.ListMatches (0, 20, "", false, 0, 0, OnMatchList);
@@ -118,7 +118,7 @@ public class MatchManager : MonoBehaviour{
 		}
 	}
 
-	public void ExitMatchButtonClick()
+	public void OnExitMatchClick()
 	{
 		PlayerXrCamera.GetComponentInChildren<PlayerController> ().PlannedDisconnect = true;
 		ExitMatch ();
@@ -131,9 +131,6 @@ public class MatchManager : MonoBehaviour{
 		// Reset the map
 		Destroy (LocalMap.Instance.gameObject);
 		Instantiate (MapPrefab);
-
-		// TODO: Temporary code
-		Destroy(GameObject.Find("Debug Video Provider Camera"));
 
 		InGameMenu.SetActive (false);
 		Reset ();
@@ -156,13 +153,13 @@ public class MatchManager : MonoBehaviour{
 				joinButton.GetComponent<RectTransform> ().sizeDelta = 
 					new Vector2(MatchButtonList.GetComponent<RectTransform> ().rect.width - 40, joinButton.GetComponent<RectTransform>().rect.height);
 				int matchNum = i;
-				joinButton.GetComponent<Button> ().onClick.AddListener (delegate {JoinMatchButtonClick (matchNum);});
+				joinButton.GetComponent<Button> ().onClick.AddListener (delegate {OnJoinMatchClick (matchNum);});
 				joinButton.GetComponentInChildren<Text> ().text = GameNetworkManager.matches[matchNum].name;
 			}
 		}
 	}	
 		
-	private void JoinMatchButtonClick(int matchNum)
+	private void OnJoinMatchClick(int matchNum)
 	{
 		_matchNumToJoin = matchNum;
 		MatchButtonList.transform.parent.gameObject.SetActive (false);

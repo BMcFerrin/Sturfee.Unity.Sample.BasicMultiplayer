@@ -1057,7 +1057,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114416909968962504}
-        m_MethodName: ShootButtonClick
+        m_MethodName: OnShootClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1350,7 +1350,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114416909968962504}
-        m_MethodName: PlaceTargetButtonClick
+        m_MethodName: OnPlaceTargetClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
